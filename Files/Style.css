@@ -1,0 +1,975 @@
+html
+{
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    background-color: #212;
+    overflow-x: hidden;
+}
+
+/*#region Scrow bar */
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 5px #111; 
+}
+
+::-webkit-scrollbar-thumb
+{
+	background: #c87696; 
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: #9b5774;
+}
+/*#endregion Scrow bar */
+
+/*#region Top bar */
+.topBar
+{
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+
+    z-index: 90;
+
+    transition: ease .3s;
+}
+
+.topBar a::before
+{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 7.5px;
+    bottom: -5px;
+    left: 35%;
+    background-color: #fcf1eb;
+    visibility: hidden;
+    transform: scaleX(0);
+
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.topBar a
+{
+    position: relative;
+    float: right;
+    padding: 16px 35px;
+    color: #fcf1eb;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    bottom: -30;
+    right: 40;
+
+    transition: ease .3s;
+}
+
+.topBar a.Logo
+{
+    float: left;
+    font-size: 35px;
+    font-weight: bolder;
+    right: 0;
+    left: 40;
+}
+
+.topBar a.Logo otherColor
+{
+    color: #c87696;
+}
+
+.topBar a:hover::before
+{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.topBar a:hover
+{
+    color: #c87696;
+}
+
+.topBar a.threeLaneButton
+{
+    display: none;
+    width: 50px;
+    height: 35px;
+    padding: 0;
+    margin-top: 16px;
+    margin-right: 30px;
+
+    transition: ease .3s;
+}
+
+.topBar a.threeLaneButton div
+{
+    position: absolute;
+    float: right;
+    height: 3px;
+    background-color: #fcf1eb;
+
+    transition: ease .3s;
+}
+
+.topBar a.threeLaneButton div:nth-child(1)
+{
+    width: 27px;
+    top: 0;
+    right: 0;
+}
+
+.topBar a.threeLaneButton div:nth-child(2)
+{
+    width: 50px;
+    top: calc(50% - 1.5px);
+    right: 0;
+}
+
+.topBar a.threeLaneButton div:nth-child(3)
+{
+    width: 27px;
+    bottom: 0;
+    right: 0;
+}
+
+.topBar a.threeLaneButton:hover::before
+{
+    visibility: hidden;
+    transform: scaleX(1);
+}
+
+.topBar a.threeLaneButton:hover div
+{
+    width: 100%;
+    background-color: #c87696;
+}
+/*#endregion Top bar */
+
+/*#region Side bar */
+.sideBar
+{
+    position: relative;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 91;
+	top: 0;
+	left: 0;
+	background-color: #212;
+    overflow-x: hidden;
+
+    clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+
+    transition: ease .3s;
+}
+
+.sideBar a
+{
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fcf1eb;
+    display: table;
+    line-height: 70px;
+    top: 130;
+    left: 30;
+
+    transition: ease .3s;
+}
+
+.sideBar a.closeButton
+{
+    float: right;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 23;
+    left: unset;
+    right: 47.5;
+}
+
+.sideBar a.closeButton div
+{
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #fcf1eb;
+    top: 50%;
+
+    transition: ease .3s;
+}
+
+.sideBar a:hover
+{
+    color: #c87696;
+}
+
+.sideBar a.closeButton div:nth-child(1)
+{
+    transform: rotate(45deg);
+}
+
+.sideBar a.closeButton div:nth-child(2)
+{
+    transform: rotate(-45deg);
+}
+
+.sideBar a.closeButton:hover div
+{
+    background-color: #c87696;
+}
+
+.sideBar a.closeButton:hover div:nth-child(1), .sideBar a.closeButton:hover div:nth-child(2)
+{
+    width: 120%;
+    height: 5px;
+}
+/*#endregion Side bar */
+
+/*#region Main page title */
+.mainPageTitle
+{
+    position: relative;
+    width: 750px;
+    height: 170px;
+    top: 150;
+    left: 120;
+    color: #fcf1eb;
+
+    transition: ease .3s;
+}
+
+.mainPageTitle .Line
+{
+    position: relative;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fcf1eb;
+
+    transition: ease .3s;
+}
+
+.mainPageTitle h1
+{
+    position: absolute;
+    font-size: 100px;
+    transform: scale(1.3, 1);
+    bottom: -70;
+    left: 125;
+
+    transition: ease .3s;
+}
+
+.mainPageTitle h3
+{
+    position: absolute;
+    font-size: 42px;
+    top: -30;
+    left: 40;
+
+    transition: ease .3s;
+}
+/*#endregion Main page title */
+
+/*#region Side links */
+.sideLinks
+{
+    position: relative;
+    float: right;
+    width: 60px;
+    height: 170;
+    top: -20;
+    right: 20;
+    background-color: transparent;
+
+    transition: ease .3s;
+}
+
+.sideLinks a
+{
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    color: #fcf1eb;
+    padding: 5px 5px;
+    top: 0;
+
+    transition: ease .3s;
+}
+
+.sideLinks a.Facebook
+{
+    top: 35;
+    left: 12;
+}
+
+.sideLinks a.soundCloud
+{
+    top: 60;
+    left: 2;
+}
+
+.sideLinks a.Facebook:hover
+{
+    color: #3b5998;
+}
+
+.sideLinks a.soundCloud:hover
+{
+    color: #ff7700;
+}
+/*#endregion Side links */
+
+/*#region Bottom side links */
+.bottomSideLinks
+{
+    display: none;
+    position: absolute;
+    float: right;
+    width: 150px;
+    height: 60;
+    bottom: 0;
+    right: 40;
+    background-color: transparent;
+
+    transition: ease .3s;
+}
+
+.bottomSideLinks a
+{
+    position: relative;
+    font-size: 40px;
+    text-decoration: none;
+    color: #fcf1eb;
+    padding: 5px 5px;
+    top: 0;
+
+    transition: ease .3s;
+}
+
+.bottomSideLinks a.Facebook
+{
+    top: 0;
+    left: 0;
+}
+
+.bottomSideLinks a.soundCloud
+{
+    top: 0;
+    left: 30;
+}
+
+.bottomSideLinks a.Facebook:hover
+{
+    color: #3b5998;
+}
+
+.bottomSideLinks a.soundCloud:hover
+{
+    color: #ff7700;
+}
+/*#endregion Bottom side links */
+
+/*#region Main panels */
+.mainPanels
+{
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    top: 748;
+    left: 0;
+    background-color: transparent;
+}
+
+.mainPanels .columnBy2:nth-child(1)
+{
+    color: #e4d5ba;
+    background-color: #271f1a;
+}
+
+.mainPanels .columnBy2:nth-child(2)
+{
+    color: #271f1a;
+    background-color: #e4d5ba;
+}
+
+.mainPanels .columnBy2 h1
+{
+    position: relative;
+    font-family: 'Titillium Web', sans-serif;
+    width: 200px;
+    top: calc(50% - 210px);
+    left: 40;
+    font-size: 130px;
+    font-weight: 100;
+    opacity: .7;
+}
+
+.mainPanels .columnBy2 h2
+{
+    position: relative;
+    top: -330;
+    left: 350;
+    font-size: 50px;
+    font-weight: bold;
+    transform: scale(1.3, 1);
+}
+
+.mainPanels .columnBy2 p
+{
+    position: relative;
+    top: -360;
+    left: 238;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: justify;
+    padding-right: 300px;
+}
+/*#endregion Main panels */
+
+/*#region Short biography */
+.shoryBiography
+{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    background-color: #212;
+    top: 1098;
+}
+
+.shoryBiography h1
+{
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    color: #fcf1eb;
+}
+
+.shoryBiography img
+{
+    position: relative;
+    height: 250px;
+    top: 40;
+    left: 75;
+    border: solid 4px #fcf1eb;
+}
+
+.shoryBiography p
+{
+    position: absolute;
+    height: 260px;
+    font-size: 27px;
+    top: 200;
+    left: 405;
+    color: #fcf1eb;
+    padding-right: 75px;
+    opacity: .7;
+}
+
+.shoryBiography a
+{
+    position: absolute;
+    font-size: 27px;
+    text-decoration: none;
+    bottom: 210;
+    left: 405;
+    padding: 12px 40px;
+    border: solid 4px #fcf1eb;
+    color: #fcf1eb;
+    background-color: transparent;
+    opacity: 1;
+
+    transition: ease .3s;
+}
+
+.shoryBiography a:hover
+{
+    background-color: #fcf1eb20;
+}
+/*#endregion Short biography */
+
+/*#region Color box */
+.purpleBox
+{
+    position: fixed;
+    width: 100%;
+    height: 750px;
+    top: 0;
+    background-image: linear-gradient(#212, #c79, rgb(0, 0, 0, 0));
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+}
+
+.purpleBox img
+{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    mix-blend-mode: multiply;
+    background-repeat: no-repeat;
+    opacity: 1;
+
+    transition: ease .3s;
+}
+/*#endregion Color box */
+
+/*#region Bottom Bar */
+.bottomBar
+{
+    position: absolute;
+    width: 100%;
+    height: 160px;
+    background-color: #111;
+    top: 1798;
+    left: 0;
+
+    transition: ease .3s;
+}
+
+.bottomBar a
+{
+    position: relative;
+    width: 1%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 35px;
+    line-height: 60px;
+    display: table-cell;
+    color: #fcf1eb;
+    top: 40;
+    opacity: .4;
+
+    transition: ease .3s;
+}
+
+.bottomBar p
+{
+    position: absolute;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: #fcf1eb40;
+    bottom: -10;
+
+    transition: ease .3s;
+}
+
+.bottomBar a:hover
+{
+    opacity: .8;
+}
+
+.bottomBar a.Facebook:hover
+{
+    color: #3b5998;
+}
+
+.bottomBar a.soundCloud:hover
+{
+    color: #ff7700;
+}
+
+.bottomBar p powerd:hover phx
+{
+    color: #ff3c00a0;
+    transition: ease .3s;
+}
+
+.bottomBar p managed:hover my
+{
+    color: #61d0fca0;
+    transition: ease .3s;
+}
+/*#endregion Bottom Bar */
+
+.columnBy2
+{
+	float: left;
+	width: 50%;
+	height: 350px;
+    background-color: transparent;
+    
+    transition: ease .3s;
+}
+
+.Row
+{
+    transition: ease .3s;
+
+    transition: ease .3s;
+}
+
+.Row:after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/*#region Media 1300-1000 */
+@media screen and (max-width: 1300px)
+{
+    .mainPanels
+    {
+        height: 370px;
+    }
+
+    .mainPanels .columnBy2 p
+    {
+        font-size: 20px;
+    }
+
+    .shoryBiography
+    {
+        top: 1118;
+    }
+
+    .bottomBar
+    {
+        top: 1818;
+    }
+
+    .columnBy2
+    {
+        height: 370px;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    .shoryBiography a
+    {
+        bottom: 100;
+        left: 405;
+    }
+}
+
+@media screen and (max-width: 1100px)
+{
+    .purpleBox img
+    {
+        width: 150%;
+    }
+
+    .sideLinks
+    {
+        display: none;
+    }
+
+    .bottomSideLinks
+    {
+        display: inline;
+    }
+
+    .mainPanels .columnBy2 h1
+    {
+        width: 120px;
+        top: calc(50% - 210px);
+        left: 30;
+        font-size: 100px;
+    }
+
+    .mainPanels .columnBy2 h2
+    {
+        top: -230;
+        left: 260;
+        font-size: 40px;
+        transform: scale(1.3, 1);
+    }
+
+    .mainPanels .columnBy2 p
+    {
+        top: -250;
+        left: 180;
+        font-size: 18px;
+        padding-right: 220px;
+    }
+
+    .shoryBiography p
+    {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .mainPageTitle
+    {
+        left: 60;
+    }
+}
+/*#endregion Media 1300-1000 */
+
+/*#region Media 950-700 */
+@media screen and (max-width: 950px)
+{
+    .shoryBiography p
+    {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+    .mainPageTitle h1
+    {
+        font-size: 80px;
+        bottom: -40;
+        left: 110;
+    }
+    
+    .mainPageTitle h3
+    {
+        font-size: 32px;
+        top: -10;
+    }
+
+    .mainPanels .columnBy2
+    {
+        width: 100%;
+    }
+
+    .shoryBiography
+    {
+        top: 1480;
+    }
+
+    .mainPanels .columnBy2 h1
+    {
+        top: calc(50% - 230px);
+    }
+
+    .mainPanels .columnBy2 h2
+    {
+        top: -250;
+        left: 0;
+        margin-left: 260px;
+    }
+
+    .mainPanels .columnBy2 p
+    {
+        top: -260;
+        left: 190;
+        padding-right: 220px;
+    }
+
+    .bottomBar
+    {
+        top: 2148;
+    }
+}
+
+@media screen and (max-width: 800px)
+{
+    .shoryBiography
+    {
+        height: 850px;
+    }
+
+    .shoryBiography img
+    {
+        top: 10;
+        left: calc(50% - 125px);
+    }
+
+    .shoryBiography p
+    {
+        height: 260px;
+        top: 490;
+        left: 30;
+        padding-right: 30px;
+    }
+
+    .shoryBiography a
+    {
+        bottom: 60;
+        left: calc(50% - 100px);
+    }
+
+    .bottomBar
+    {
+        top: 2298;
+    }
+}
+
+@media screen and (max-width: 750px)
+{
+    .purpleBox img
+    {
+        width: 200%;
+    }
+
+    .mainPageTitle
+    {
+        height: 130px;
+        left: 30;
+    }
+    
+    .mainPageTitle h1
+    {
+        font-size: 65px;
+        left: 97;
+    }
+    
+    .mainPageTitle h3
+    {
+        font-size: 30px;
+        top: -20;
+    }
+
+    .bottomBar
+    {
+        height: 350px;
+    }
+
+    .bottomBar a
+    {
+        display: table;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+
+}
+/*#endregion Media 950-700 */
+
+/*#region Media 650-420 */
+@media screen and (max-width: 650px)
+{
+    .topBar a
+    {
+        padding: 16px 20px;
+        bottom: -15;
+        right: 20;
+    }
+    
+    .topBar a.Logo
+    {
+        left: 20;
+    }
+}
+
+@media screen and (max-width: 600px)
+{
+    .topBar a
+    {
+        display: none;
+    }
+
+    .topBar a.threeLaneButton
+    {
+        display: inline;
+    }
+
+    .topBar a.Logo
+    {
+        display: inline;
+    }
+
+    .mainPageTitle
+    {
+        height: 100px;
+        left: 20;
+    }
+    
+    .mainPageTitle h1
+    {
+        font-size: 45px;
+        transform: scale(1.1, 1);
+        bottom: -20;
+        left: 33;
+    }
+    
+    .mainPageTitle h3
+    {
+        font-size: 22px;
+        left: 20;
+        top: -5;
+    }
+
+    .bottomSideLinks
+    {
+        right: 20;
+    }
+}
+
+@media screen and (max-width: 550px)
+{
+    .purpleBox img
+    {
+        width: 300%;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    .mainPanels .columnBy2
+    {
+        height: 320px;
+    }
+
+    .mainPanels .columnBy2 h1
+    {
+        top: calc(50% - 170px);
+        font-size: 70px;
+    }
+
+    .mainPanels .columnBy2 h2
+    {
+        top: -170;
+        left: 230;
+        margin-left: 0px;
+    }
+
+    .mainPanels .columnBy2 p
+    {
+        top: -180;
+        left: 160;
+        padding-right: 190px;
+        font-size: 16px;
+    }
+
+    .shoryBiography
+    {
+        top: 1380;
+    }
+
+    .shoryBiography
+    {
+        height: 950px;
+    }
+
+    .shoryBiography h1
+    {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 420px)
+{
+
+}
+/*#endregion Media 650-420 */
