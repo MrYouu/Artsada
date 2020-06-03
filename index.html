@@ -1,0 +1,143 @@
+<html id = "html">
+    <head>
+        <link href = "https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel = "stylesheet">
+        <link type = "text/css" rel = "stylesheet" href = "Files/Style.css">
+        <link rel = "icon" href = "Images/tabIcon.png" type = "image" sizes = "16x16">
+
+        <meta name = "viewport" content = "width = device-width, user-scalable = no" />
+        
+        <script type = "text/javascript" src = "Files/Functions.js"></script>
+        <script src = "https://kit.fontawesome.com/190623e0b3.js" crossorigin = "anonymous"></script>
+
+        <title>Artsada</title>
+    </head>
+
+    <body>
+        <!-- #region Loader -->
+        <div class = "Loader">
+			<div class="obj"></div>
+			<div class="obj"></div>
+			<div class="obj"></div>
+			<div class="obj"></div>
+			<div class="obj"></div>
+			<div class="obj"></div>
+			<div class="obj"></div>
+			<div class="obj"></div>
+        </div>
+
+        <script>
+            window.addEventListener("load", function ()
+			{
+				const Loader = document.querySelector(".Loader")
+				Loader.className += " hidden";
+            });
+
+            window.scroll(
+            {
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+		</script>
+        <!-- #endregion Loader -->
+
+        <div class = "sideBar" id = "sideBar">
+            <a onclick = "closeMenu()" class = "closeButton">
+                <div></div>
+                <div></div>
+            </a>
+
+            <a href = "#">Music</a>
+            <a href = "#">Events</a>
+        </div>
+
+        <div class = "topBar" id = "topBar">
+            <a href = "#" class = "Logo">ART<otherColor>SADA</otherColor></a>
+            <a href = "#">Events</a>
+            <a href = "#">Music</a>
+
+            <a onclick = "openMenu()" class = "threeLaneButton">
+                <div></div>
+                <div></div>
+                <div></div>
+            </a>
+        </div>
+
+        <div class = "purpleBox"><img src = "Images/mainPageImage.png"></div>
+
+        <div class = "mainPageTitle">
+            <div class = "Line"></div>
+            <h3>Listen the most beautiful music</h3>
+            <h1>IN ARTSADA</h1>
+        </div>
+
+        <div class = "sideLinks">
+            <a href = "https://www.facebook.com/fergus.johnston" class = "Facebook" target = "_blank">
+                <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "https://soundcloud.com/fergusjohnston" class = "soundCloud"target = "_blank">
+                <i class = "fab fa-soundcloud"></i>
+            </a>
+        </div>
+
+        <div class = "bottomSideLinks">
+            <a href = "https://www.facebook.com/fergus.johnston" class = "Facebook" target = "_blank">
+                <i class = "fab fa-facebook-f"></i>
+            </a>
+            <a href = "https://soundcloud.com/fergusjohnston" class = "soundCloud"target = "_blank">
+                <i class = "fab fa-soundcloud"></i>
+            </a>
+        </div>
+
+        <div class = "mainPanels">
+            <div class = "Row">
+                <div class = "columnBy2" id = "First">
+                    <h1>01.</h1>
+                    <h2>MUSIC</h2>
+                    <p>Artsada Music has a performance-oriented music creation focus,
+                        dedicated to creating concert music for contemporary performing artists,
+                        in order to broaden their performance opportunities and repertoire.</p>
+                </div>
+
+                <div class = "columnBy2" id = "Second">
+                    <h1>02.</h1>
+                    <h2>EVENTS</h2>
+                    <p>Artsada Events has a results oriented event management focus,
+                        dedicated to assisting companies within the creative industries sector to
+                        position their brand and achieve their business goals.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "shoryBiography">
+            <h1>Fergus Johnston</h1>
+
+            <img src = "Images/FergusJohnston.png">
+
+            <p>
+                Fergus Johnston is an Irish composer, and member of Aosdána, Ireland’s organisation of
+                outstanding artists. He was a recipient of both the New Music for Sligo Composition Prize,
+                and the Arts Council of Ireland’s Macaulay Fellowship in 1989, and has served as a
+                non-executive board member of the National Concert Hall, Dublin.
+            </p>
+
+            <a href = "#">Read more</a>
+        </div>
+
+        <div class = "bottomBar">
+            <a href = "#" class = "Music"><i class="fas fa-music"></i> Music</a>
+            <a href = "#" class = "Events"><i class="fas fa-calendar-alt"></i> Events</a>
+            <a href = "https://www.facebook.com/fergus.johnston" class = "Facebook" target = "_blank">
+                <i class = "fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href = "https://soundcloud.com/fergusjohnston" class = "soundCloud" target = "_blank">
+                <i class = "fab fa-soundcloud"></i> SoundCloud
+            </a>
+
+            <p>
+                <powerd>Site powered by <phx>Phoenix Development</phx>.</powerd>
+                <managed> Managed by <my>Mr.You</my></managed>
+            </p>
+        </div>
+    </body>
+</html>
