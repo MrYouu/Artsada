@@ -38,6 +38,109 @@ body
 }
 /*#endregion Scrow bar */
 
+/*#region Loader */
+.Loader
+{
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #212;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-y: hidden;
+}
+
+.Loader svg
+{
+    width: 505px;
+    height: 505px;
+    background-color: transparent;
+}
+
+.Loader svg polygon.Outline
+{
+    fill: transparent;
+    stroke: #fcf1eb;
+    stroke-width: 7;
+    stroke-dasharray: 0 700;
+
+    animation: fillTheStroke 3s ease-out infinite;
+}
+
+.Loader svg polygon.Fill
+{
+    fill: url(#colorGradient);
+
+    animation: fillTheInside 3s ease-out infinite;
+}
+
+.Loader svg polygon:nth-child(1), .Loader svg polygon:nth-child(2)
+{
+    display: inline;
+}
+
+.Loader svg polygon:nth-child(3), .Loader svg polygon:nth-child(4)
+{
+    display: none;
+}
+
+.Loader.hidden
+{
+	animation: fadeOut 1s;
+	animation-fill-mode: forwards;
+	overflow-y: visible;
+}
+
+@keyframes fadeOut
+{
+	100%
+	{
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+@keyframes fillTheStroke
+{
+    0%
+    {
+        stroke-dasharray: 0 700;
+    }
+
+    50%
+    {
+        stroke-dasharray: 750 0;
+    }
+    
+    100%
+    {
+        stroke-dasharray: 0 700;
+    }
+}
+
+@keyframes fillTheInside
+{
+    0%
+    {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+
+    50%
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    100%
+    {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+}
+/*#endregion Loader */
+
 /*#region Top bar */
 .topBar
 {
@@ -87,6 +190,18 @@ body
     font-weight: bolder;
     right: 0;
     left: 40;
+}
+
+.topBar a.Logo img
+{
+    width: 250px;
+
+    transition: ease .3s;
+}
+
+.topBar a.Logo img:hover
+{
+    width: 270px;
 }
 
 .topBar a.Logo otherColor
@@ -347,7 +462,7 @@ body
     float: right;
     width: 150px;
     height: 60;
-    bottom: 0;
+    bottom: 30;
     right: 40;
     background-color: transparent;
 
@@ -852,7 +967,21 @@ body
 
 @media screen and (max-width: 700px)
 {
+    .Loader svg
+    {
+        width: 305px;
+        height: 305px;
+    }
 
+    .Loader svg polygon:nth-child(1), .Loader svg polygon:nth-child(2)
+    {
+        display: none;
+    }
+
+    .Loader svg polygon:nth-child(3), .Loader svg polygon:nth-child(4)
+    {
+        display: inline;
+    }
 }
 /*#endregion Media 950-700 */
 
