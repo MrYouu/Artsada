@@ -15,14 +15,84 @@
     <body>
         <!-- #region Loader -->
         <div class = "Loader">
-			<div class="obj"></div>
-			<div class="obj"></div>
-			<div class="obj"></div>
-			<div class="obj"></div>
-			<div class="obj"></div>
-			<div class="obj"></div>
-			<div class="obj"></div>
-			<div class="obj"></div>
+            <svg>
+                <polygon points = "5, 5
+                                   500, 5
+                                   500, 50
+                                   450, 50
+                                   450, 500
+                                   300, 500
+                                   300, 350
+                                   400, 350
+                                   400, 50
+                                   150, 50
+                                   150, 500
+                                   5, 500
+                                   5, 350
+                                   100, 350
+                                   100, 50
+                                   5, 50" class = "Fill" />
+
+                <polygon points = "5, 5
+                                   500, 5
+                                   500, 50
+                                   450, 50
+                                   450, 500
+                                   300, 500
+                                   300, 350
+                                   400, 350
+                                   400, 50
+                                   150, 50
+                                   150, 500
+                                   5, 500
+                                   5, 350
+                                   100, 350
+                                   100, 50
+                                   5, 50" class = "Outline" />
+
+                <polygon points = "5, 5
+                                   300, 5
+                                   300, 30
+                                   270, 30
+                                   270, 300
+                                   180, 300
+                                   180, 210
+                                   240, 210
+                                   240, 30
+                                   90, 30
+                                   90, 300
+                                   5, 300
+                                   5, 210
+                                   60, 210
+                                   60, 30
+                                   5, 30" class = "Fill" />
+                
+                <polygon points = "5, 5
+                                   300, 5
+                                   300, 30
+                                   270, 30
+                                   270, 300
+                                   180, 300
+                                   180, 210
+                                   240, 210
+                                   240, 30
+                                   90, 30
+                                   90, 300
+                                   5, 300
+                                   5, 210
+                                   60, 210
+                                   60, 30
+                                   5, 30" class = "Outline" />
+
+                <defs>
+                    <linearGradient id = "colorGradient" gradientTransform = "rotate(90)">
+                        <stop offset = "0" stop-color = "#c87696"/>
+                        <stop offset = "1" stop-color = "#9b5774"/>
+                    </linearGradient>
+                </defs>
+
+                Sorry, your browser does not support inline SVG.
+            </svg>
         </div>
 
         <script>
@@ -52,7 +122,8 @@
         </div>
 
         <div class = "topBar" id = "topBar">
-            <a href = "#" class = "Logo">ART<otherColor>SADA</otherColor></a>
+            <!--<a href = "#" class = "Logo">ART<otherColor>SADA</otherColor></a>-->
+            <a href = "#" class = "Logo"><img src = "Images/Logo.png"></a>
             <a href = "#">Events</a>
             <a href = "#">Music</a>
 
