@@ -226,7 +226,7 @@ body
     width: 50px;
     height: 35px;
     padding: 0;
-    margin-top: 16px;
+    margin-top: 20px;
     margin-right: 30px;
 
     transition: ease .3s;
@@ -998,6 +998,16 @@ body
     .topBar a.Logo
     {
         left: 20;
+    }
+
+    .topBar a.Logo img
+    {
+        width: 200px;
+    }
+
+    .topBar a.Logo img:hover
+    {
+        width: 220px;
     }
 }
 
